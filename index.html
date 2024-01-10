@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Pokedex</h1>
+      <form aria-label="pokemon search form" id="pokemon-search-form">
+        <h2>Find a Pokemon</h2>
+        <label for="pokemon"></label>
+        <input type="text" name="pokemon" id="pokemon-input" />
+        <button type="submit">Submit</button>
+      </form>
+      <section id="pokemon-display">
+        <div id="pokemon-picture">
+          <img src="" alt="" />
+          <p></p>
+        </div>
+        <div id="pokemon-stats">
+          <ul></ul>
+        </div>
+      </section>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
