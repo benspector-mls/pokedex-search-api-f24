@@ -25,9 +25,34 @@ plan out the logic:
   * use that data to fetch a new pokemon (make sure to catch any errors)
   * render that pokemon to the screen
 
-## Code
+## HTML
 
-First, get pikachua data on page load. Here we use a helper function that can fetch and render any pokemon
+Within the `body` of our `index.html` file, we'll provide the structure for our application's front end
+
+```html
+<div id="app">
+  <h1>Pokedex</h1>
+  <form aria-label="pokemon search form" id="pokemon-search-form">
+    <h2>Find a Pokemon</h2>
+    <label for="pokemon"></label>
+    <input type="text" name="pokemon" id="pokemon-input" />
+    <button type="submit">Submit</button>
+  </form>
+  <section id="pokemon-display">
+    <div id="pokemon-picture">
+      <img src="" alt="" />
+      <p></p>
+    </div>
+    <div id="pokemon-stats">
+      <ul></ul>
+    </div>
+  </section>
+</div>
+```
+
+## JavaScript
+
+First, render pikachua data when the page loads. Here we use a helper function that can fetch and render any pokemon. The flexibility of this generic helper function will be useful for the search functionality.
 
 ```js
 const getPokemonData = (pokemonName) => {
@@ -35,8 +60,8 @@ const getPokemonData = (pokemonName) => {
   promise
     .then((response) => response.json())
     .then((data) => {
-      // render the data
       console.log(data);
+      // render the data
       const img = document.querySelector("#pokemon-picture>img")
       const p = document.querySelector("#pokemon-picture>p")
       img.src = data.sprites.front_default;
