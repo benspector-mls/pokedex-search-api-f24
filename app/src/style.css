@@ -1,0 +1,13 @@
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+#pokemon-info-container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
